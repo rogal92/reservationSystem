@@ -4,6 +4,7 @@ import com.google.common.base.Strings;
 
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
+import java.util.Date;
 
 public abstract class ValidatorHelper {
 
@@ -21,6 +22,10 @@ public abstract class ValidatorHelper {
 
     boolean isNullValue(Object value) {
         return value == null;
+    }
+
+    boolean isDateNull(Date date) {
+        return date == null;
     }
 
     boolean isValidEmailAddress(String email) {
