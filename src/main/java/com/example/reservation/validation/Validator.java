@@ -1,8 +1,8 @@
 package com.example.reservation.validation;
 
-import javax.swing.text.html.Option;
+import java.util.Optional;
 
 public interface Validator <K> {
 
-    Option<ValidationError> validate(K k);
+    Optional<ValidationError> validate(K k);
 }

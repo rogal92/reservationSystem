@@ -8,7 +8,7 @@ public class ValidationError {
         this.message = message;
     }
 
-    public void getMessage() {
+    public String getMessage() {
         return message;
     }
 }
