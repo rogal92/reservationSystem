@@ -19,11 +19,15 @@ public abstract class ValidatorHelper {
         return value > 0;
     }
 
+    boolean isNullValue(Object value) {
+        return value == null;
+    }
+
     boolean isValidEmailAddress(String email) {
         boolean result = true;
-        InternetAddress address = new InternetAddress(email);
 
         try {
+        InternetAddress address = new InternetAddress(email);
             address.validate();
         } catch (AddressException e) {
             result false;
