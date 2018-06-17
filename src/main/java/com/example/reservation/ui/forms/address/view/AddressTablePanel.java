@@ -1,6 +1,6 @@
-package com.example.reservation.ui.forms.view;
+package com.example.reservation.ui.forms.address.view;
 
-import com.example.reservation.ui.forms.model.AddressTableModel;
+import com.example.reservation.ui.forms.address.model.AddressTableModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

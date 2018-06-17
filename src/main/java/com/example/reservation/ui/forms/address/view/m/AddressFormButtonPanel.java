@@ -1,4 +1,4 @@
-package com.example.reservation.ui.forms.view.m;
+package com.example.reservation.ui.forms.address.view.m;
 
 import com.example.reservation.util.NameType;
 import org.springframework.stereotype.Component;

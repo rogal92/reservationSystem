@@ -1,4 +1,4 @@
-package com.example.reservation.ui.forms.model;
+package com.example.reservation.ui.forms.address.model;
 
 import com.example.reservation.entities.Address;
 import com.example.reservation.ui.Shared.model.DefaultTableModel;
