@@ -25,7 +25,7 @@ public class Client {
     private String surname;
 
     @Column(name = "phone_number")
-    private int phoneNumber;
+    private String phoneNumber;
 
     @Column(name = "email")
     private String eMail;
@@ -47,12 +47,36 @@ public class Client {
         return surname;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
     public String geteMail() {
         return eMail;
+    }
+
+    public void setId(@NonNull long id) {
+        this.id = id;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
     }
 
     @Override
