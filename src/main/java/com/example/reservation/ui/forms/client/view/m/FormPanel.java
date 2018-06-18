@@ -4,6 +4,7 @@ import com.example.reservation.entities.Address;
 import com.example.reservation.entities.Client;
 import com.example.reservation.util.Borders;
 import com.example.reservation.util.NameType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -21,6 +22,11 @@ public class FormPanel extends JPanel {
     private JTextField nameTF, surnameTF, phoneNumberTF, emailTF;
     private JComboBox<Address> addressCombo;
 
+    @Autowired
+    public FormPanel() {
+        setPanelUp();
+        initComponents();
+    }
     private void setPanelUp() {
         setBorder(Borders.createEmptyBorder());
         setLayout(new GridLayout(LAYOUT_ROWS, LAYOUT_COLS, HORIZONTAL_GAP, VERTICAL_GAP));
@@ -54,8 +60,8 @@ public class FormPanel extends JPanel {
         add(addressCombo);
     }
 
-    private Client getClientFromForm(Client client) {
-        client = new Client();
+    public Client getClientFromForm() {
+        Client client = new Client();
         client.setName(nameTF.getText());
         client.setSurname(surnameTF.getText());
         client.setPhoneNumber(phoneNumberTF.getText());
@@ -63,7 +69,7 @@ public class FormPanel extends JPanel {
         client.setAddress(addressCombo.getSelectedItem());
     }
 
-    private void clearForm() {
+    public void clearForm() {
         nameTF.setText("");
         surnameTF.setText("");
         phoneNumberTF.setText("");
