@@ -5,6 +5,9 @@ import com.example.reservation.entities.PaymentMethod;
 import com.example.reservation.ui.forms.payment.model.PaymentMethodComboBoxModel;
 import com.example.reservation.util.Borders;
 import com.example.reservation.util.NameType;
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import org.jdatepicker.impl.UtilDateModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,7 +29,14 @@ public class PaymentFormPanel extends JPanel {
 
     private JComboBox<PaymentMethod> paymentMethodJComboBox;
     private JTextField valueJTF;
-    private  jDateChooser  jDateChooser;
+    private UtilDateModel utilDateModel;
+    private JDatePanelImpl jDatePanel;
+    private JDatePickerImpl jDatePicker;
+
+    public PaymentFormPanel() {
+        setPanelUp();
+        initComponents();
+    }
 
     private PaymentMethodComboBoxModel paymentMethodComboBoxModel;
 
@@ -43,6 +53,9 @@ public class PaymentFormPanel extends JPanel {
         paymentMethodJComboBox = new JComboBox<>(paymentMethodComboBoxModel);
         valueJTF = new JTextField(TEXT_FIELD_COLUMNS);
         ////datechooser
+        utilDateModel = new UtilDateModel();
+        jDatePanel = new JDatePanelImpl(utilDateModel);
+        jDatePicker = new JDatePickerImpl(jDatePanel);
 
 
         add(paymentMethodLbl);
@@ -50,9 +63,10 @@ public class PaymentFormPanel extends JPanel {
         add(valueLbl);
         add(valueJTF);
         add(dateOfPayment);
+        add(jDatePicker);
     }
 
-    public getEntityFromForm() {
+    public Payment getEntityFromForm() {
         Payment payment = new Payment();
 
         payment.getPaymentMethod(paymentMethodComboBoxModel.getSelectedItem());
