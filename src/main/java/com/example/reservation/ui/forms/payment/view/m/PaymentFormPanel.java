@@ -1,5 +1,6 @@
 package com.example.reservation.ui.forms.payment.view.m;
 
+import com.example.reservation.entities.Payment;
 import com.example.reservation.entities.PaymentMethod;
 import com.example.reservation.ui.forms.payment.model.PaymentMethodComboBoxModel;
 import com.example.reservation.util.Borders;
@@ -27,7 +28,7 @@ public class PaymentFormPanel extends JPanel {
     private JTextField valueJTF;
     private  jDateChooser  jDateChooser;
 
-    private PaymentMethodComboBoxModel paymentMethodComboBox;
+    private PaymentMethodComboBoxModel paymentMethodComboBoxModel;
 
     private void setPanelUp() {
         setBorder(Borders.createEmptyBorder());
@@ -39,7 +40,29 @@ public class PaymentFormPanel extends JPanel {
         JLabel valueLbl = new JLabel(NameType.VALUE);
         JLabel dateOfPayment = new JLabel(NameType.DATE_OF_PAYMENT);
 
-        paymentMethodJComboBox = new JComboBox<>(paymentMethodComboBox);
+        paymentMethodJComboBox = new JComboBox<>(paymentMethodComboBoxModel);
         valueJTF = new JTextField(TEXT_FIELD_COLUMNS);
+        ////datechooser
+
+
+        add(paymentMethodLbl);
+        add(paymentMethodJComboBox);
+        add(valueLbl);
+        add(valueJTF);
+        add(dateOfPayment);
+    }
+
+    public getEntityFromForm() {
+        Payment payment = new Payment();
+
+        payment.getPaymentMethod(paymentMethodComboBoxModel.getSelectedItem());
+        payment.getValue(Long.valueOf(valueJTF.getText()));
+        payment.getPaymentsDate();
+
+        return payment;
+    }
+
+    public void clearForm() {
+        valueJTF.setText("");
     }
 }
