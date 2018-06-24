@@ -26,6 +26,14 @@ public class PaymentMethod {
         return methodName;
     }
 
+    public void setId(@NonNull long id) {
+        this.id = id;
+    }
+
+    public void setMethodName(String methodName) {
+        this.methodName = methodName;
+    }
+
     @Override
     public String toString() {
         return methodName + "";
