@@ -17,6 +17,8 @@ public class PaymentMTableButtonPanel extends JPanel {
     private void initComponents() {
         addButton = new JButton(NameType.ADD);
         deleteButton = new JButton(NameType.REMOVE);
+        add(addButton);
+        add(deleteButton);
     }
 
     public JButton getAddButton() {
