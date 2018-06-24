@@ -30,11 +30,11 @@ public class Payment {
         return id;
     }
 
-    public PaymentMethod getPaymentMethod() {
+    public PaymentMethod getPaymentMethod(PaymentMethod selectedItem) {
         return paymentMethod;
     }
 
-    public long getValue() {
+    public long getValue(Long aLong) {
         return value;
     }
 

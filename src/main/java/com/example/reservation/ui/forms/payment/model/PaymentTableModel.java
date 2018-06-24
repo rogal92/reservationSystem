@@ -22,9 +22,9 @@ public class PaymentTableModel extends DefaultTableModel<Payment> {
 
         switch (columnIndex) {
             case 0:
-                return payment.getPaymentMethod();
+                return payment.getPaymentMethod(paymentMethodComboBoxModel.getSelectedItem());
             case 1:
-                return payment.getValue();
+                return payment.getValue(Long.valueOf(valueJTF.getText()));
             case 2:
                 return payment.getPaymentsDate();
             default:

@@ -26,6 +26,7 @@ public interface NameType {
     String PAYMENT_METHOD = "Metoda płatności";
     String VALUE = "Wartość";
     String DATE_OF_PAYMENT = "Data płatności";
+    String PAYMENT_ADD = "Dodawanie płatności";
     String PAYMENT = "Płatność";
     String CLIENT = "Klient";
     String FROM_DATE = "Od";
