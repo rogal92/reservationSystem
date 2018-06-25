@@ -1,12 +1,10 @@
 package com.example.reservation.ui.forms.reservation.view;
 
-import com.example.reservation.util.Messages;
 import com.example.reservation.util.NameType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 
 @Component
