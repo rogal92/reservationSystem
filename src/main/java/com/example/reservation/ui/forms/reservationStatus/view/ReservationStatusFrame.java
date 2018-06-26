@@ -36,12 +36,4 @@ public class ReservationStatusFrame extends JFrame {
         add(tablePanel, BorderLayout.CENTER);
         add(tableButtonPanel, BorderLayout.SOUTH);
     }
-
-    public static int getWIDTH() {
-        return WIDTH;
-    }
-
-    public static int getHEIGHT() {
-        return HEIGHT;
-    }
 }

@@ -26,6 +26,10 @@ public class ReservationStatus {
         return reservationStatus;
     }
 
+    public void setReservationStatus(String reservationStatus) {
+        this.reservationStatus = reservationStatus;
+    }
+
     @Override
     public String toString() {
         return reservationStatus + "";
