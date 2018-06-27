@@ -34,6 +34,14 @@ public class Treatment {
         return treatmentName;
     }
 
+    public void setTreatmentType(TreatmentType treatmentType) {
+        this.treatmentType = treatmentType;
+    }
+
+    public void setTreatmentName(String treatmentName) {
+        this.treatmentName = treatmentName;
+    }
+
     @Override
     public String toString() {
         return treatmentName + " " +
