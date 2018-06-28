@@ -37,6 +37,10 @@ public class TreatmentReservation {
         return treatmentPrice;
     }
 
+    public void setTreatmentPrice(long treatmentPrice) {
+        this.treatmentPrice = treatmentPrice;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
