@@ -19,7 +19,9 @@ public class TreatmentTableFrame extends JFrame {
     @Autowired
     private TreatmentTableButtonPanel tableButtonPanel;
 
-    public TreatmentTableFrame() {
+    public TreatmentTableFrame(TreatmentTablePanel tablePanel, TreatmentTableButtonPanel tableButtonPanel) {
+        this.tablePanel = tablePanel;
+        this.tableButtonPanel = tableButtonPanel;
         setFrameUp();
         initComponets();
     }
@@ -35,5 +37,13 @@ public class TreatmentTableFrame extends JFrame {
     private void initComponets() {
         add(tablePanel, BorderLayout.CENTER);
         add(tableButtonPanel, BorderLayout.SOUTH);
+    }
+
+    public TreatmentTablePanel getTablePanel() {
+        return tablePanel;
+    }
+
+    public TreatmentTableButtonPanel getTableButtonPanel() {
+        return tableButtonPanel;
     }
 }

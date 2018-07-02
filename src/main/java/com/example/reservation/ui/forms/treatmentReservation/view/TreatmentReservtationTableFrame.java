@@ -19,6 +19,13 @@ public class TreatmentReservtationTableFrame extends JFrame {
     @Autowired
     private TreatmentReservationTablePanel tablePanel;
 
+    public TreatmentReservtationTableFrame(TreatmentReservationTablePanel tablePanel, TreatmentReservationButtonPanel buttonPanel) {
+        this.buttonPanel = buttonPanel;
+        this.tablePanel = tablePanel;
+        setFrameUp();
+        initComponents();
+    }
+
     private void setFrameUp() {
         setSize(WIDTH,HEIGHT);
         setTitle(NameType.TREATMENT_RESERVATIONS);
