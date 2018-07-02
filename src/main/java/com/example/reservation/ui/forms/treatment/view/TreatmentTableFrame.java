@@ -1,4 +1,4 @@
-package com.example.reservation.ui.forms.Treatment.view;
+package com.example.reservation.ui.forms.treatment.view;
 
 import com.example.reservation.util.NameType;
 import org.springframework.beans.factory.annotation.Autowired;

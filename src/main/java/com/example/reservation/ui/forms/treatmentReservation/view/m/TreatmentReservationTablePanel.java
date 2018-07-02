@@ -23,6 +23,12 @@ public class TreatmentReservationTablePanel extends JPanel {
     @Autowired
     private TreatmentReservationTableModel tableModel;
 
+    public TreatmentReservationTablePanel(TreatmentReservationTableModel tableModel) {
+        this.tableModel = tableModel;
+        setFrameUp();
+        initComponents();
+    }
+
     private void setFrameUp() {
         setBorder(Borders.createEmptyBorder());
         setLayout(new GridLayout(ROWS,COLUMNS,HORIZONTAL_GAP,VERTICAL_GAP));

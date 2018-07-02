@@ -1,11 +1,10 @@
-package com.example.reservation.ui.forms.Treatment.view;
+package com.example.reservation.ui.forms.treatment.view;
 
-import com.example.reservation.ui.forms.Treatment.model.TreatmentTableModel;
+import com.example.reservation.ui.forms.treatment.model.TreatmentTableModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 
 @Component

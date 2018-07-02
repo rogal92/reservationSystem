@@ -1,8 +1,8 @@
-package com.example.reservation.ui.forms.Treatment.view.m;
+package com.example.reservation.ui.forms.treatment.view.m;
 
 import com.example.reservation.entities.Treatment;
 import com.example.reservation.entities.TreatmentType;
-import com.example.reservation.ui.forms.Treatment.model.TreatmentTypeComboBoxModel;
+import com.example.reservation.ui.forms.treatment.model.TreatmentTypeComboBoxModel;
 import com.example.reservation.util.Borders;
 import com.example.reservation.util.NameType;
 import org.springframework.beans.factory.annotation.Autowired;

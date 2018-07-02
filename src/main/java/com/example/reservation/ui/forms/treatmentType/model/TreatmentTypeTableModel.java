@@ -1,29 +1,27 @@
-package com.example.reservation.ui.forms.Treatment.model;
+package com.example.reservation.ui.forms.treatmentType.model;
 
-import com.example.reservation.entities.Treatment;
+import com.example.reservation.entities.TreatmentType;
 import com.example.reservation.ui.Shared.model.DefaultTableModel;
 import com.example.reservation.util.NameType;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TreatmentTableModel extends DefaultTableModel<Treatment> {
+public class TreatmentTypeTableModel extends DefaultTableModel<TreatmentType> {
+
     @Override
     public String[] getColumnLabels() {
         return new String[] {
-                NameType.TREATMENT,
-                NameType.TREATMENT_TYPE
+                NameType.TREATMENT_TYPE_DESCRIPTION
         };
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Treatment treatment = entities.get(rowIndex);
+        TreatmentType treatmentType = entities.get(rowIndex);
 
         switch (columnIndex) {
             case 0:
-                return treatment.getTreatmentName();
-            case 0:
-                return treatment.getTreatmentType();
+                return treatmentType.getTreatmentDescription();
             default:
                 return "";
         }
