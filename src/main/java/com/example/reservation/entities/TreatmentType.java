@@ -26,6 +26,10 @@ public class TreatmentType {
         return treatmentDescription;
     }
 
+    public void setTreatmentDescription(String treatmentDescription) {
+        this.treatmentDescription = treatmentDescription;
+    }
+
     @Override
     public String toString() {
         return treatmentDescription;
