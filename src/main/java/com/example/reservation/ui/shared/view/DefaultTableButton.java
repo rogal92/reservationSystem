@@ -1,4 +1,4 @@
-package com.example.reservation.ui.Shared.view;
+package com.example.reservation.ui.shared.view;
 
 
 import com.example.reservation.util.NameType;

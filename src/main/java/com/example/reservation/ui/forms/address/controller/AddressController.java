@@ -1,6 +1,6 @@
 package com.example.reservation.ui.forms.address.controller;
 
-import com.example.reservation.ui.Shared.controller.AbstractFrameController;
+import com.example.reservation.ui.shared.controller.AbstractFrameController;
 import com.example.reservation.ui.forms.address.model.AddressTableModel;
 import com.example.reservation.ui.forms.address.view.AddressTablePanel;
 import com.example.reservation.ui.forms.address.view.m.AddAddressFrame;

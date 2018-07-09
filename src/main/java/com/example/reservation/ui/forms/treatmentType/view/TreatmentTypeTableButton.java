@@ -1,6 +1,6 @@
 package com.example.reservation.ui.forms.treatmentType.view;
 
-import com.example.reservation.ui.Shared.view.DefaultTableButton;
+import com.example.reservation.ui.shared.view.DefaultTableButton;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;

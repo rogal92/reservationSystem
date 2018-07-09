@@ -1,7 +1,7 @@
 package com.example.reservation.ui.forms.treatmentType.model;
 
 import com.example.reservation.entities.TreatmentType;
-import com.example.reservation.ui.Shared.model.DefaultTableModel;
+import com.example.reservation.ui.shared.model.DefaultTableModel;
 import com.example.reservation.util.NameType;
 import org.springframework.stereotype.Component;
 

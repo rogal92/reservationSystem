@@ -1,4 +1,4 @@
-package com.example.reservation.ui.Shared.model;
+package com.example.reservation.ui.shared.model;
 
 import java.util.List;
 

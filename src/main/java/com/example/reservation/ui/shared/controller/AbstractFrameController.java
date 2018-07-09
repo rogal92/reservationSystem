@@ -1,4 +1,4 @@
-package com.example.reservation.ui.Shared.controller;
+package com.example.reservation.ui.shared.controller;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
