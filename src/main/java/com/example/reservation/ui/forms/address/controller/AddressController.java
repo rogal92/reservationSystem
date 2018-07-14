@@ -10,7 +10,6 @@ import com.example.reservation.ui.forms.address.view.AddressTablePanel;
 import com.example.reservation.ui.forms.address.view.m.AddAddressFrame;
 import com.example.reservation.util.Messages;
 import com.example.reservation.util.Notifications;
-import com.example.reservation.util.ValidationMsg;
 import com.example.reservation.validation.AddressValidation;
 import com.example.reservation.validation.ValidationError;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,12 +77,10 @@ public class AddressController extends AbstractFrameController {
     }
 
     private void saveEntity() {
-        AddressFormPanel formPanel = addAddressFrame.getAddressFormPanel();
-        Address entity = formPanel.getEntityFromForm();
+        Address entity = addAddressFrame.getAddressFormPanel().getEntityFromForm();
         Optional<ValidationError> validationError = addressValidation.validate(entity);
         if (validationError.isPresent()) {
-            ValidationError error = validationError.get();
-            Notifications.showFormValidationAlert(error.getMessage());
+            Notifications.showFormValidationAlert(validationError.get().getMessage());
         } else {
             addressService.save(entity);
             addressTableModel.addEntity(entity);

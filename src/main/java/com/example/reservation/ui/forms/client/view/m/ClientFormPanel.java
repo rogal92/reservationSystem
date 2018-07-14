@@ -11,7 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 
 @Component
-public class FormPanel extends JPanel {
+public class ClientFormPanel extends JPanel {
 
     private static final int LAYOUT_ROWS = 6;
     private static final int LAYOUT_COLS = 2;
@@ -23,7 +23,7 @@ public class FormPanel extends JPanel {
     private JComboBox<Address> addressCombo;
 
     @Autowired
-    public FormPanel() {
+    public ClientFormPanel() {
         setPanelUp();
         initComponents();
     }

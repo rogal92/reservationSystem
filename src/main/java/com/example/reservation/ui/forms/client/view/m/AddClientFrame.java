@@ -11,14 +11,14 @@ import java.awt.*;
 public class AddClientFrame  extends JDialog {
 
     @Autowired
-    private FormPanel formPanel;
+    private ClientFormPanel clientFormPanel;
 
     @Autowired
-    private FormButtonPanel formButtonPanel;
+    private ClientFormButtonPanel clientFormButtonPanel;
 
-    public AddClientFrame(FormPanel formPanel, FormButtonPanel formButtonPanel) {
-        this.formPanel = formPanel;
-        this.formButtonPanel = formButtonPanel;
+    public AddClientFrame(ClientFormPanel clientFormPanel, ClientFormButtonPanel clientFormButtonPanel) {
+        this.clientFormPanel = clientFormPanel;
+        this.clientFormButtonPanel = clientFormButtonPanel;
 
         setFrameUp();
         initComponents();
@@ -33,15 +33,15 @@ public class AddClientFrame  extends JDialog {
     }
 
     private void initComponents() {
-        add(formPanel, BorderLayout.CENTER);
-        add(formButtonPanel, BorderLayout.SOUTH);
+        add(clientFormPanel, BorderLayout.CENTER);
+        add(clientFormButtonPanel, BorderLayout.SOUTH);
     }
 
-    public FormPanel getFormPanel() {
-        return formPanel;
+    public ClientFormPanel getClientFormPanel() {
+        return clientFormPanel;
     }
 
-    public FormButtonPanel getFormButtonPanel() {
-        return formButtonPanel;
+    public ClientFormButtonPanel getClientFormButtonPanel() {
+        return clientFormButtonPanel;
     }
 }

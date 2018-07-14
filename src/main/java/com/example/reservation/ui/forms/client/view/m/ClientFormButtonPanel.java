@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 
 @Component
-public class FormButtonPanel extends JPanel {
+public class ClientFormButtonPanel extends JPanel {
 
     private JButton save, cancel;
 
