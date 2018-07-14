@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TreatmentType {
+public class TreatmentTypeService {
 
     @Autowired
     private TreatmentTypeRepository treatmentReservation;
 
-    public TreatmentType(TreatmentTypeRepository treatmentReservation) {
+    public TreatmentTypeService(TreatmentTypeRepository treatmentReservation) {
         this.treatmentReservation = treatmentReservation;
     }
 

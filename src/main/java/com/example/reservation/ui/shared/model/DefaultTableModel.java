@@ -31,6 +31,14 @@ public abstract class DefaultTableModel<T> extends AbstractTableModel {
         fireTableDataChanged();
     }
 
+    public T getEntityByRow(int selectedRow) {
+        return entities.get(selectedRow);
+    }
+
+    public void removeRow(int row) {
+        entities.remove(row);
+        fireTableDataChanged();
+    }
     public void addEntities(List<T> entities) {
         this.entities.addAll(entities);
         fireTableDataChanged();

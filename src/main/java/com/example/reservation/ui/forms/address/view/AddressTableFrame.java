@@ -14,12 +14,14 @@ public class AddressTableFrame extends JFrame {
     private static final int HEIGHT = 250
 
     @Autowired
-    AddressTablePanel addressTablePanel;
+    private AddressTablePanel addressTablePanel;
 
     @Autowired
-    AddressTableButtonPanel addressTableButtonPanel;
+    private AddressTableButtonPanel addressTableButtonPanel;
 
-    public AddressTablePanel() {
+    public AddressTableFrame(AddressTablePanel addressTablePanel, AddressTableButtonPanel addressTableButtonPanel) throws HeadlessException {
+        this.addressTablePanel = addressTablePanel;
+        this.addressTableButtonPanel = addressTableButtonPanel;
         setFrameUp();
         initComponents();
     }
@@ -35,5 +37,13 @@ public class AddressTableFrame extends JFrame {
     private void initComponents() {
         add(addressTablePanel, BorderLayout.CENTER);
         add(addressTableButtonPanel, BorderLayout.AFTER_LAST_LINE);
+    }
+
+    public AddressTablePanel getAddressTablePanel() {
+        return addressTablePanel;
+    }
+
+    public AddressTableButtonPanel getAddressTableButtonPanel() {
+        return addressTableButtonPanel;
     }
 }

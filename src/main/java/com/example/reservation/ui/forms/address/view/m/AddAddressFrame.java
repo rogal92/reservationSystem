@@ -17,7 +17,9 @@ public class AddAddressFrame extends JDialog {
     @Autowired
     AddressFormPanel addressFormPanel;
 
-    public AddAddressFrame() {
+    public AddAddressFrame(AddressFormButtonPanel addressFormButtonPanel, AddressFormPanel addressFormPanel) {
+        this.addressFormButtonPanel = addressFormButtonPanel;
+        this.addressFormPanel = addressFormPanel;
         setFrameUp();
         initComponents();
         pack();
@@ -34,6 +36,14 @@ public class AddAddressFrame extends JDialog {
     private void initComponents() {
         add(addressFormPanel, BorderLayout.CENTER);
         add(addressFormButtonPanel, BorderLayout.SOUTH);
+    }
+
+    public AddressFormButtonPanel getAddressFormButtonPanel() {
+        return addressFormButtonPanel;
+    }
+
+    public AddressFormPanel getAddressFormPanel() {
+        return addressFormPanel;
     }
 }
 
