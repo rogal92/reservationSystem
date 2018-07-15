@@ -3,7 +3,6 @@ package com.example.reservation.ui.forms.address.controller;
 import com.example.reservation.entities.Address;
 import com.example.reservation.service.AdressService;
 import com.example.reservation.ui.forms.address.view.AddressTableFrame;
-import com.example.reservation.ui.forms.address.view.m.AddressFormPanel;
 import com.example.reservation.ui.shared.controller.AbstractFrameController;
 import com.example.reservation.ui.forms.address.model.AddressTableModel;
 import com.example.reservation.ui.forms.address.view.AddressTablePanel;
