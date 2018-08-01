@@ -27,7 +27,6 @@ public class AddPaymentFrame extends JFrame {
     private void setFrameUp() {
         setTitle(NameType.PAYMENT_ADD);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setVisible(true);
         setResizable(false);
     }
 

@@ -91,7 +91,7 @@ public class ClientController extends AbstractFrameController {
         addClientFrame.setVisible(true);
     }
 
-    private void saveEntity() {
+    private void saveClient() {
         Client client = addClientFrame.getClientFormPanel().getClientFromForm();
         Optional<ValidationError> error = clientValidation.validate(client);
 
@@ -102,7 +102,7 @@ public class ClientController extends AbstractFrameController {
         clientTableModel.addEntity(client);
     }
 
-    private void deleteEntity() {
+    private void removrClient() {
         try {
         JTable table = clientFrame.getClientTablePanel().getClientTable();
         int selectedRow = table.getSelectedRow();
